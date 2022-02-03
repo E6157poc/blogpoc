@@ -1,13 +1,20 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 5.1.4'
-#DB
-gem 'pg'
+
+gem 'blueprinter'
+
+# DB
 gem 'elasticsearch'
-#itildesk
-gem "redis","3.3.1"
-gem "redis-namespace", "1.5.2"
-#APP Server(Performance)
+
+
+# itildesk
+gem 'redis','3.3.1'
+gem 'redis-namespace', '1.5.2'
+
+gem 'mysql2', '< 0.5'
+
+# APP Server(Performance)
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.3.7'
@@ -20,7 +27,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
-gem 'blueprinter'
+
 
 gem 'simplecov', require: false, group: :test
 

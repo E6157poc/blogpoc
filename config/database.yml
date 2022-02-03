@@ -5,13 +5,17 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: postgresql
-  encoding: unicode
+  adapter: mysql2
+  encoding: utf8
   database: blog
   pool: 5
+  host: mysql
   reconnect: true
-  username: postgres
+  username: root
   password:
+  migration_user:
+    username: root
+    password:
 
 development:
   <<: *default
