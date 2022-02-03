@@ -18,6 +18,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     @article.user = current_user
     if @article.save
+      ArticleMailer.with(article: @article).new_article_email.deliver_later
       flash[:success] = "Article was created successfully"
       redirect_to article_path(@article)
     else
